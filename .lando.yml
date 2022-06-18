@@ -1,0 +1,24 @@
+name: drupal9-workflows
+recipe: drupal9
+config:
+  webroot: web
+  php: '8.1'
+services:
+  appserver:
+    xdebug: true
+    # overrides:
+      # environment:
+        # Support debugging CLI with XDEBUG
+        # PHP_IDE_CONFIG: servername=appserver
+        # XDEBUG_SESSION: PHPSTORM
+        # XDEBUG_CONFIG: client_host=host.docker.internal
+  drupal9-workflow:
+    type: mariadb
+    creds:
+      user: drupal9
+      password: drupal9
+      database: drupal9
+  phpmyadmin:
+    type: phpmyadmin
+  cache:
+    type: redis
