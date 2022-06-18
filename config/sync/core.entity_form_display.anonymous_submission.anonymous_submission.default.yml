@@ -1,0 +1,41 @@
+uuid: b78dbeb5-ec68-4ace-ba5c-9d82050d0494
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflows.workflow.anonymous_submission_workflow
+  module:
+    - content_moderation
+    - d9_workflow
+    - text
+id: anonymous_submission.anonymous_submission.default
+targetEntityType: anonymous_submission
+bundle: anonymous_submission
+mode: default
+content:
+  body:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

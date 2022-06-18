@@ -1,0 +1,41 @@
+uuid: 172f3447-ea9e-4953-aaf8-66f1d0009f13
+langcode: en
+status: true
+dependencies:
+  module:
+    - d9_workflow
+    - text
+id: anonymous_submission.anonymous_submission.default
+targetEntityType: anonymous_submission
+bundle: anonymous_submission
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  created:
+    type: timestamp_ago
+    label: above
+    settings:
+      future_format: '@interval hence'
+      past_format: '@interval ago'
+      granularity: 2
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  content_moderation_control: true
+  status: true
+  uid: true

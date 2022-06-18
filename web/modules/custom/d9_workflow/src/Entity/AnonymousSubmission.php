@@ -248,13 +248,13 @@ class AnonymousSubmission extends RevisionableContentEntityBase implements Anony
         'settings' => [
           'display_label' => FALSE,
         ],
-        'weight' => 0,
+        'weight' => -1,
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayOptions('view', [
         'type' => 'boolean',
         'label' => 'above',
-        'weight' => 0,
+        'weight' => -1,
         'settings' => [
           'format' => 'enabled-disabled',
         ],
