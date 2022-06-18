@@ -1,0 +1,22 @@
+entity.anonymous_submission.settings:
+  title: Settings
+  route_name: entity.anonymous_submission.settings
+  base_route: entity.anonymous_submission.settings
+entity.anonymous_submission.view:
+  title: View
+  route_name: entity.anonymous_submission.canonical
+  base_route: entity.anonymous_submission.canonical
+entity.anonymous_submission.edit_form:
+  title: Edit
+  route_name: entity.anonymous_submission.edit_form
+  base_route: entity.anonymous_submission.canonical
+entity.anonymous_submission.delete_form:
+  title: Delete
+  route_name: entity.anonymous_submission.delete_form
+  base_route: entity.anonymous_submission.canonical
+  weight: 10
+entity.anonymous_submission.collection:
+  title: Anonymous submission
+  route_name: entity.anonymous_submission.collection
+  base_route: system.admin_content
+  weight: 10

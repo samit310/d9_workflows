@@ -1,0 +1,7 @@
+entity.anonymous_submission.settings:
+  path: 'admin/structure/anonymous-submission'
+  defaults:
+    _form: '\Drupal\d9_workflow\Form\AnonymousSubmissionSettingsForm'
+    _title: 'Anonymous submission'
+  requirements:
+    _permission: 'administer anonymous submission'

@@ -1,0 +1,9 @@
+name: Drupal9 Workflow
+type: module
+description: 'Provides an anonymous submission entity.'
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9
+dependencies:
+  - drupal:text
+configure: entity.anonymous_submission.settings

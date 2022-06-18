@@ -1,0 +1,13 @@
+administer anonymous submission:
+  title: 'Administer anonymous submission settings'
+  restrict access: true
+access anonymous submission overview:
+  title: 'Access anonymous submission overview page'
+delete anonymous submission:
+  title: Delete anonymous submission
+create anonymous submission:
+  title: Create anonymous submission
+view anonymous submission:
+  title: View anonymous submission
+edit anonymous submission:
+  title: Edit anonymous submission
