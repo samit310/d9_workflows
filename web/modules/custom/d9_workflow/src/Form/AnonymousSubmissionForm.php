@@ -31,7 +31,7 @@ class AnonymousSubmissionForm extends ContentEntityForm {
       $this->logger('d9_workflow')->notice('Updated new anonymous submission %label.', $logger_arguments);
     }
 
-    $form_state->setRedirect('entity.anonymous_submission.canonical', ['anonymous_submission' => $entity->id()]);
+    $form_state->setRedirect('view.published_submissions.page_1');
   }
 
 }

@@ -4,12 +4,13 @@ status: true
 dependencies:
   config:
     - filter.format.restricted_html
+    - workflows.workflow.anonymous_submission_workflow
   module:
-    - comment
     - contact
+    - content_moderation
+    - d9_workflow
     - filter
     - search
-    - system
 _core:
   default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
 id: anonymous
@@ -17,8 +18,9 @@ label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
-  - 'access comments'
-  - 'access content'
   - 'access site-wide contact form'
+  - 'create anonymous submission'
   - 'search content'
+  - 'use anonymous_submission_workflow transition create_new_draft'
   - 'use text format restricted_html'
+  - 'view anonymous submission'

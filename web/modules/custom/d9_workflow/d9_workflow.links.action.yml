@@ -3,3 +3,4 @@ anonymous_submission.add_form:
   title: 'Add anonymous submission'
   appears_on:
     - entity.anonymous_submission.collection
+    - view.published_submissions.page_1

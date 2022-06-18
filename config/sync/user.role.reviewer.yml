@@ -1,0 +1,29 @@
+uuid: cd80c6f2-1209-4ce5-bc5c-0f69b2fb877b
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.restricted_html
+    - workflows.workflow.anonymous_submission_workflow
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - d9_workflow
+    - filter
+    - toolbar
+    - workbench
+id: reviewer
+label: Reviewer
+weight: 4
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'access workbench'
+  - 'edit anonymous submission'
+  - 'use anonymous_submission_workflow transition draft_to_reject'
+  - 'use anonymous_submission_workflow transition publish'
+  - 'use editorial transition publish'
+  - 'use text format basic_html'
+  - 'use text format restricted_html'
+  - 'view anonymous submission'
