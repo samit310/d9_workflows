@@ -1,0 +1,10 @@
+entity.anonymous_submission.settings:
+  title: Anonymous submission
+  description: Configure an Anonymous submission entity type
+  route_name:  entity.anonymous_submission.settings
+  parent: system.admin_structure
+entity.anonymous_submission.collection:
+  title: Anonymous submissions
+  description: List of anonymous submissions
+  route_name: entity.anonymous_submission.collection
+  parent: system.admin_content

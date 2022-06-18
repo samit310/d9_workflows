@@ -1,0 +1,5 @@
+anonymous_submission.add_form:
+  route_name: entity.anonymous_submission.add_form
+  title: 'Add anonymous submission'
+  appears_on:
+    - entity.anonymous_submission.collection
