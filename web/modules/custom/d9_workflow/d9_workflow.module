@@ -34,3 +34,21 @@ function template_preprocess_anonymous_submission(array &$variables) {
     $variables['content'][$key] = $variables['elements'][$key];
   }
 }
+
+/**
+ * Implements hook_cron().
+ */
+function d9_workflow_cron() {
+  $rejected_entitys = \Drupal::database()->query("SELECT asfd.id FROM {anonymous_submission_field_data} asfd
+                                        INNER JOIN {content_moderation_state_field_data} cmsf
+                                        ON asfd.id = cmsf.content_entity_id
+                                        WHERE cmsf.moderation_state = 'reject'")->fetchAllAssoc('id');
+  if (!empty($rejected_entitys)) {
+    $queue = \Drupal::queue('d9_workflow_rejected_anonymous_submission_deletion');
+    foreach ($rejected_entitys as $rejected_entity) {
+      $queue->createQueue();
+      $queue->createItem($rejected_entity->id);
+      \Drupal::logger('d9_workflow_cron')->info(t('The queue Has been created for %id.', ['%id' => $rejected_entity->id]));
+    }
+  }
+}

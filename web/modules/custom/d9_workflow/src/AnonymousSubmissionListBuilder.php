@@ -2,6 +2,7 @@
 
 namespace Drupal\d9_workflow;
 
+use Drupal\Component\Utility\Unicode;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityListBuilder;
 use Drupal\Core\Datetime\DateFormatterInterface;
@@ -81,6 +82,7 @@ class AnonymousSubmissionListBuilder extends EntityListBuilder {
     $header['id'] = $this->t('ID');
     $header['title'] = $this->t('Title');
     $header['status'] = $this->t('Status');
+    $header['moderation_state'] = $this->t('Moderation State');
     $header['uid'] = $this->t('Author');
     $header['created'] = $this->t('Created');
     $header['changed'] = $this->t('Updated');
@@ -95,6 +97,7 @@ class AnonymousSubmissionListBuilder extends EntityListBuilder {
     $row['id'] = $entity->id();
     $row['title'] = $entity->toLink();
     $row['status'] = $entity->isEnabled() ? $this->t('Enabled') : $this->t('Disabled');
+    $row['moderation_state'] = Unicode::ucwords($entity->moderation_state->value);
     $row['uid']['data'] = [
       '#theme' => 'username',
       '#account' => $entity->getOwner(),
