@@ -1,0 +1,7 @@
+uuid: f1f04d86-a2ae-422a-9149-80060b1e5a2d
+langcode: en
+status: true
+dependencies: {  }
+formId: anonymous_submission_add_form
+captchaType: default
+label: anonymous_submission_add_form

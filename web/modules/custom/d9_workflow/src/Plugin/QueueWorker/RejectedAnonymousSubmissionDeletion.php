@@ -79,9 +79,9 @@ class RejectedAnonymousSubmissionDeletion extends QueueWorkerBase implements Con
    * {@inheritdoc}
    */
   public function processItem($data) {
-    if (!empty($data)) {
+    if (isset($data)) {
       try {
-        $rejected_entity = $this->entityTypeManager->getStorage('anonymous_submission')->load($data[0]);
+        $rejected_entity = $this->entityTypeManager->getStorage('anonymous_submission')->load($data);
         /*
          * Check if entity exists.
          */
