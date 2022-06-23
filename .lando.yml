@@ -6,12 +6,9 @@ config:
 services:
   appserver:
     xdebug: true
-    # overrides:
-      # environment:
-        # Support debugging CLI with XDEBUG
-        # PHP_IDE_CONFIG: servername=appserver
-        # XDEBUG_SESSION: PHPSTORM
-        # XDEBUG_CONFIG: client_host=host.docker.internal
+    overrides:
+      environment:
+        PHP_IDE_CONFIG: "servername=appserver"
   drupal9-workflow:
     type: mariadb
     creds:
